@@ -1,0 +1,290 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+}
+
+html , body{
+    height: 100%;
+    width: 100%;
+}
+
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(75, 190, 178);
+}
+
+#card1{
+    height: 55vh;
+    width: 20vw;
+    background-color: aliceblue;
+    border-radius: 3%;
+}
+
+.img{
+    height: 50%;
+    border-radius: 2%;
+    overflow: hidden;
+    margin: 1rem;
+}
+#card1 img{
+    height: 100%;
+    width: 100%;
+    background-size: cover; 
+}
+#card1 h1{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+#card1 h4{
+    text-align: center;
+    color: rgb(138, 139, 63);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.button{
+    margin-top: 1.5rem;
+    text-align: center;
+
+}
+.button #Add{
+    font-family: 'Gilroy';
+    color: #fff;
+    background-color: rgb(37, 87, 180);
+    padding: 0.5rem 1rem;
+    font-size: 1em;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.button #Remove{
+    font-family: 'Gilroy';
+    color: #000000;
+    background-color: #b3b2b5;
+    padding: 0.5rem 1rem;
+    font-size: 1em;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer; 
+}
+
+
+/* for card 2 */
+#card2{
+    height: 55vh;
+    width: 20vw;
+    background-color: aliceblue;
+    border-radius: 3%;
+}
+.img{
+    height: 50%;
+    border-radius: 2%;
+    overflow: hidden;
+    margin: 1rem;
+}
+#card2 img{
+    height: 100%;
+    width: 100%;
+    background-size: cover; 
+}
+#card2 h1{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+#card2 h4{
+    text-align: center;
+    color: rgb(138, 139, 63);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.button2{
+    margin-top: 1.5rem;
+    text-align: center;
+
+}
+.button2 #Add2{
+    font-family: 'Gilroy';
+    color: #fff;
+    background-color: rgb(37, 87, 180);
+    padding: 0.5rem 1rem;
+    font-size: 1em;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.button2 #Remove2{
+    font-family: 'Gilroy';
+    color: #000000;
+    background-color: #b3b2b5;
+    padding: 0.5rem 1rem;
+    font-size: 1em;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer; 
+}
+
+
+/* For card 3 */
+#card3{
+    height: 55vh;
+    width: 20vw;
+    background-color: aliceblue;
+    border-radius: 3%;
+}
+.img{
+    height: 50%;
+    border-radius: 2%;
+    overflow: hidden;
+    margin: 1rem;
+}
+#card3 img{
+    height: 100%;
+    width: 100%;
+    background-size: cover; 
+}
+#card3 h1{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+#card3 h4{
+    text-align: center;
+    color: rgb(138, 139, 63);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.button3{
+    margin-top: 1.5rem;
+    text-align: center;
+
+}
+.button3 #Add3{
+    font-family: 'Gilroy';
+    color: #fff;
+    background-color: rgb(37, 87, 180);
+    padding: 0.5rem 1rem;
+    font-size: 1em;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.button3 #Remove3{
+    font-family: 'Gilroy';
+    color: #000000;
+    background-color: #b3b2b5;
+    padding: 0.5rem 1rem;
+    font-size: 1em;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer; 
+}
+
+/* for card 4 */
+#card4{
+    height: 55vh;
+    width: 20vw;
+    background-color: aliceblue;
+    border-radius: 3%;
+}
+.img{
+    height: 50%;
+    border-radius: 2%;
+    overflow: hidden;
+    margin: 1rem;
+}
+#card4 img{
+    height: 100%;
+    width: 100%;
+    background-size: cover; 
+}
+#card4 h1{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+#card4 h4{
+    text-align: center;
+    color: rgb(138, 139, 63);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.button4{
+    margin-top: 1.5rem;
+    text-align: center;
+
+}
+.button4 #Add4{
+    font-family: 'Gilroy';
+    color: #fff;
+    background-color: rgb(37, 87, 180);
+    padding: 0.5rem 1rem;
+    font-size: 1em;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.button4 #Remove4{
+    font-family: 'Gilroy';
+    color: #000000;
+    background-color: #b3b2b5;
+    padding: 0.5rem 1rem;
+    font-size: 1em;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer; 
+}
+
+@media (max-width:600px){
+    .container{
+        background: #000;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;   
+    }
+    #card1 , #card2 , #card3 , #card4{
+        background:#f1efef ;
+        width: 35vw;
+        height: 45vh;
+    }
+    #card1 h1 , #card2 h1,  #card3 h1,#card4 h1 {
+        text-align: center;
+        font-size: 1.5em;
+        font-weight: 900;
+    }
+    #card1 h4 , #card2 h4 , #card3 h4 , #card4 h4{
+        text-align:center;
+        font-size: 1.2em;
+        font-weight: 600;
+    }
+
+    #card1 #Add , #card2 #Add2 , #card3 #Add3 , #card4 #Add4 {
+        background-color: cadetblue;
+        padding: 0.5rem 0.5rem;
+    }
+    #card1 #Remove , #card2 #Remove2 , #card3 #Remove3 , #card4 #Remove4{
+        padding: 0.5rem 0.8rem;
+    }
+}
