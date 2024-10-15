@@ -6,7 +6,7 @@ document.getElementById("searchButton").addEventListener('click', () => {
 });
 
 const getData= async (location)=>{
-    const apikey="53b40ab3889f20ab61cde79a4b3163a5"
+    const apikey="" // create your account and enter the details
     if(location!=""){
         let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apikey}`)
         if(!response.ok) throw new Error("some issue with Input");
