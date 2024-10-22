@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+header{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+
+.nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 0.95px solid #1F1F1F;
+}
+.nav .one img{
+    width: 90%;
+}
+
+.nav .two ul{
+    display: flex;
+    list-style: none;
+}
+.nav .two ul li{
+    margin-right: 40px;
+}
+
+.nav .two ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+.nav .two ul li:first-child a{
+    color: #00FFA7 ;
+}
+
+.banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 50%;
+    align-self: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.banner h1{
+     color: white;
+    font-size: 100px;
+    font-weight: bolder ;
+    line-height: 1;
+}
+.banner h1 span{
+    background: linear-gradient(270deg, #00FFA7 0%, #FFFF00 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.banner p{
+    font-size: 18px;
+    margin-top: 10px;
+}
+.banner button{
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 25px;
+    border-radius: 40px;
+    border: none;
+    font-weight: bold;
+    font-size: large;
+}
+.banner button img{
+    margin-left: 10px;
+    border-radius: 40px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+.content{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+}
+.content .content-head{
+    display: flex;
+    align-items: end;
+    margin-bottom: 20px;
+}
+.content .content-head .content-btn{
+    display: flex;
+    margin-left: 120px;
+}
+.content .content-head .content-btn img{
+    margin-left: 20px;
+}
+.content .content-head .content-text h1{
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.card{
+    display: flex;
+    margin-bottom: 10px;
+}
+.card .card-item{
+    border: 3px solid black;
+    background-color: #99f5d5;
+    border-radius: 10px;
+    width: 250px;
+    margin-left: 10px;
+}
+
+.card .card-item .card-head{
+    display: flex;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid black;
+}
+.card .card-item .card-head img{
+    border-radius: 15px;
+}
+.card .card-item .card-head h4{
+    margin-left: 10px;
+}
+
+.card-item .card-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 40px;
+    border-bottom: 2px solid black;
+}
+.card-item .card-btn{
+    display: flex;
+    justify-content: end;
+    margin: 20px;
+}
+.card-item .card-btn button{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 25px;
+    padding: 5px 10px 5px 10px;
+}
+.card-item .card-btn button img{
+    border-radius: 20px;
+    margin-left: 10px;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    margin-top: 50px;
+    padding: 50px;
+    color: white;
+}
+.footer div{
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    border-bottom: 1px solid #5E5E5E;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+button{
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav .two {
+        display: none;
+    }
+
+    .nav .one {
+        order: -1; /* Moves logo to the top */
+        align-self: flex-start;
+    }
+
+    .nav.open .two {
+        display: block;
+        margin-top: 10px;
+    }
+
+    .nav.open .two ul {
+        flex-direction: column;
+    }
+
+    .nav.open .two ul li {
+        margin: 5px 0;
+    }
+
+    .banner h1{
+        font-size: 50px ; 
+    }
+    .banner p{
+        font-size: small;
+    }
+    .banner button{
+        padding: 12px 34px;
+    }
+
+    .container .content .content-head .content-text h1{
+        font-size: 30px;
+    }
+    .container .content .content-head {
+        display: block;
+    }
+    .container .content .content-head .content-btn{
+        margin-left: 80%
+    }
+
+    .container .content .card{
+        display: block;
+    }
+    .container .content .card .card-item{
+        margin-top: 10px;
+    }
+}   
