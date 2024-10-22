@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>University - Web Design</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 text-gray-900 font-poppins">
+    <!-- Navigation -->
+    <section class="sub-header bg-blue-900 text-white">
+      <!-- Removed the SVG element for the "X" -->
+<nav class="container mx-auto flex justify-between items-center p-4">
+  <div class="nav-links">
+    <ul class="hidden md:flex space-x-4">
+      <li><a href="/Homepage.html" class="hover:text-blue-500">Home</a></li>
+      <li><a href="/AboutUs.html" class="hover:text-blue-500">About</a></li>
+      <li><a href="/Course.html" class="hover:text-blue-500">Courses</a></li>
+      <li><a href="/Blog.html" class="hover:text-blue-500">Blog</a></li>
+      <li><a href="/Contact.html" class="hover:text-blue-500">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+        <!-- Hamburger Menu for Mobile -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="22"
+          height="22"
+          fill="#fff"
+          class="bi bi-list block md:hidden"
+          id="openMenu"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+          />
+        </svg>
+      </nav>
+
+      <div class="text-box text-center py-16">
+        <h1 class="text-4xl font-semibold">Our Courses</h1>
+      </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="course py-16 bg-white">
+      <div class="container mx-auto">
+        <h1 class="text-center text-3xl font-semibold mb-6">Courses Being Offered</h1>
+        <p class="text-center max-w-2xl mx-auto text-gray-700 mb-12">
+          We offer a wide variety of courses across multiple disciplines. Our
+          programs are designed to equip students with the necessary knowledge
+          and skills for a successful future.
+        </p>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="col text-center p-6 bg-blue-50 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-4">Degree</h3>
+            <p class="text-gray-600">
+              A comprehensive degree program that covers foundational to
+              advanced topics in various fields.
+            </p>
+          </div>
+          <div class="col text-center p-6 bg-blue-50 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-4">Post Graduation</h3>
+            <p class="text-gray-600">
+              Advance your career with our post-graduation programs, offering
+              specializations in multiple disciplines.
+            </p>
+          </div>
+          <div class="col text-center p-6 bg-blue-50 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-4">Intermediate</h3>
+            <p class="text-gray-600">
+              A stepping stone towards higher education, focusing on essential
+              concepts for career progression.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section class="facilities py-16 bg-gray-100">
+      <div class="container mx-auto text-center">
+        <h1 class="text-3xl font-semibold mb-6">Our Facilities</h1>
+        <p class="max-w-2xl mx-auto text-gray-700 mb-12">
+          We provide world-class infrastructure and facilities to ensure the
+          best learning experience for our students.
+        </p>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="facilities-col p-6 bg-white rounded-lg shadow-lg">
+            <img
+              src="images/library.jpg"
+              alt="Library"
+              class="mx-auto mb-4 w-60 rounded"
+            />
+            <h3 class="text-xl font-semibold mb-4">World-Class Library</h3>
+            <p class="text-gray-600">
+              Access a vast collection of books, journals, and online resources
+              to support your learning.
+            </p>
+          </div>
+          <div class="facilities-col p-6 bg-white rounded-lg shadow-lg">
+            <img
+              src="images/playground.jpg"
+              alt="Playground"
+              class="mx-auto mb-4 w-60 rounded"
+            />
+            <h3 class="text-xl font-semibold mb-4">Largest Playground</h3>
+            <p class="text-gray-600">
+              Enjoy recreational activities in our expansive playground, perfect
+              for sports and events.
+            </p>
+          </div>
+          <div class="facilities-col p-6 bg-white rounded-lg shadow-lg">
+            <img
+              src="images/cafeteria.jpg"
+              alt="Cafeteria"
+              class="mx-auto mb-4 w-60 rounded"
+            />
+            <h3 class="text-xl font-semibold mb-4">Healthy Cafeteria</h3>
+            <p class="text-gray-600">
+              Our cafeteria serves nutritious and healthy meals to keep you
+              energized throughout the day.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <section class="footer bg-blue-900 text-white py-12">
+      <div class="container mx-auto text-center">
+        <h4 class="text-2xl mb-4">About Us</h4>
+        <p class="max-w-lg mx-auto mb-8">
+          We are dedicated to providing quality education and fostering a
+          learning environment that promotes growth and success.
+        </p>
+        <div class="icons flex justify-center space-x-4">
+          <!-- Social Media Icons -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            fill="currentColor"
+            class="bi bi-facebook text-white"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.949v-5.625H4.897V8.05h1.852V6.275c0-1.831 1.093-2.841 2.766-2.841.802 0 1.64.145 1.64.145v1.803H9.953c-.915 0-1.2.569-1.2 1.15V8.05h2.047l-.327 2.323H8.753v5.625C12.578 15.397 16 12.067 16 8.049z"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            fill="currentColor"
+            class="bi bi-twitter text-white"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.143 0-.284-.008-.425A6.687 6.687 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518A3.301 3.301 0 0 0 15.555 2a6.533 6.533 0 0 1-2.085.797 3.286 3.286 0 0 0-5.595 2.99A9.325 9.325 0 0 1 1.112 2.598 3.283 3.283 0 0 0 2.13 7.733a3.323 3.323 0 0 1-1.487-.409v.041c0 1.545 1.1 2.836 2.561 3.129a3.203 3.203 0 0 1-1.482.057 3.286 3.286 0 0 0 3.067 2.281A6.588 6.588 0 0 1 0 13.26a9.313 9.313 0 0 0 5.026 1.47"
+            />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-wEt8rm56gB0lEQ2VpMc0l2fqGrPfBmcXZfl69gIUwT3Jya0hC54QhG8vovvC2MyI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
