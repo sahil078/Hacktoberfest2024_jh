@@ -4,7 +4,8 @@ B B
 C C C
 */
 
-#include<Iostream>
+#include<iostream>
+// header file here was wrong as it started with capital i!!!
 using namespace std;
 
 int main(){
