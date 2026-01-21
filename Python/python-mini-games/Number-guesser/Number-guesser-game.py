@@ -1,36 +1,51 @@
 import random
 
-top_of_range = input("Enter a number ")
+print("\n🎯 Welcome to the Number Guesser Game!")
+print("Choose Difficulty:\n1. Easy (1-10)\n2. Medium (1-50)\n3. Hard (1-100)")
 
-if top_of_range.isdigit():
-    top_of_range = int(top_of_range)
-    
-    if top_of_range <= 0:
-        print("Please type a number larger than 0")
-        quit()
+while True:
+    choice = input("Enter your choice (1/2/3): ")
 
-else:
-    print("Please type a number next time")
-    quit()
+    if choice == '1':
+        top_of_range = 10
+        break
+    elif choice == '2':
+        top_of_range = 50
+        break
+    elif choice == '3':
+        top_of_range = 100
+        break
+    else:
+        print("❌ Invalid input. Please enter 1, 2 or 3.")
 
-random_number = random.randint(0, top_of_range)
+random_number = random.randint(1, top_of_range)
 guesses = 0
 
 while True:
+    user_guess = input(f"\n🔢 Guess a number between 1 and {top_of_range}: ")
+    if not user_guess.isdigit():
+        print("❌ Please enter a valid number.")
+        continue
+
+    user_guess = int(user_guess)
     guesses += 1
-    user_guess = input("Make a guess: ")
-    if user_guess.isdigit():
-        user_guess = int(user_guess)
-    else:
-        print("Please enter a number next time")
-        quit()
-    
+
     if user_guess == random_number:
-        print("You got it")
+        print(f"\n🎉 Congratulations! You guessed the number in {guesses} tries.")
         break
     elif user_guess > random_number:
-            print("You were above the number")
+        print("📈 Too high! Try again.")
     else:
-            print("You were below the number")
-    
-print("You got it in", guesses, "guesses")
+        print("📉 Too low! Try again.")
+
+# Ask to play again
+while True:
+    again = input("\n🔁 Do you want to play again? (y/n): ").lower()
+    if again == 'y':
+        exec(open(__file__).read())  # Restart the script
+        break
+    elif again == 'n':
+        print("👋 Thanks for playing! Goodbye!")
+        break
+    else:
+        print("Please type y or n.")
