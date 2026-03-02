@@ -141,10 +141,17 @@ Features:
 
 Run:
 ```bash
-node librarySystem.js
+node librarySystem.js [command] [args]
 ```
-Notes:
-- The library persists its collection to `library.json` in the same folder.
++Notes:
++- The library persists its collection to `library.json` in the same folder.
++- Available commands:
++  * `add "Title" "Author"`
++  * `search "Title"`
++  * `borrow "Title"`
++  * `return "Title"`
++  * `list`
++  * `help`
 
 
 ## Contribution Guidelines

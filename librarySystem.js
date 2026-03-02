@@ -113,14 +113,67 @@ class Library {
   }
 }
 
-// Example usage:
-const myLibrary = new Library();
-myLibrary.addBook("The Great Gatsby", "F. Scott Fitzgerald");
-myLibrary.addBook("To Kill a Mockingbird", "Harper Lee");
-myLibrary.addBook("to kill a mockingbird", "harper lee");
-myLibrary.searchBook("The Great Gatsby");
-myLibrary.searchBook("the great gatsby");
-myLibrary.borrowBook("The Great Gatsby");
-myLibrary.listAvailableBooks();
-myLibrary.returnBook("The Great Gatsby");
-myLibrary.listAvailableBooks();
+// simple command-line interface
+function printHelp() {
+  console.log(`Usage: node librarySystem.js <command> [args]
+
+Commands:
+  add "Title" "Author"       Add a new book
+  search "Title"              Search for a book by title
+  borrow "Title"              Borrow a book
+  return "Title"              Return a book
+  list                         List all available books
+  help                         Show this message
+`);
+}
+
+function main() {
+  const lib = new Library();
+  const [cmd, ...args] = process.argv.slice(2);
+
+  if (!cmd || cmd === "help") {
+    printHelp();
+    return;
+  }
+
+  switch (cmd.toLowerCase()) {
+    case "add":
+      if (args.length < 2) {
+        console.log("add requires title and author");
+        break;
+      }
+      lib.addBook(args[0], args[1]);
+      break;
+    case "search":
+      if (args.length < 1) {
+        console.log("search requires title");
+        break;
+      }
+      lib.searchBook(args[0]);
+      break;
+    case "borrow":
+      if (args.length < 1) {
+        console.log("borrow requires title");
+        break;
+      }
+      lib.borrowBook(args[0]);
+      break;
+    case "return":
+      if (args.length < 1) {
+        console.log("return requires title");
+        break;
+      }
+      lib.returnBook(args[0]);
+      break;
+    case "list":
+      lib.listAvailableBooks();
+      break;
+    default:
+      console.log(`Unknown command: ${cmd}`);
+      printHelp();
+  }
+}
+
+if (require.main === module) {
+  main();
+}
