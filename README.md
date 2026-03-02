@@ -127,6 +127,8 @@ Run:
 ```bash
 node bankAccountSimulation.js
 ```
+Notes:
+- Account snapshots are saved to `bank_accounts.json` when the example runs.
 
 ### 4) Library System (Node.js)
 
@@ -141,6 +143,8 @@ Run:
 ```bash
 node librarySystem.js
 ```
+Notes:
+- The library persists its collection to `library.json` in the same folder.
 
 
 ## Contribution Guidelines

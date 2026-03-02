@@ -1,6 +1,32 @@
+const fs = require('fs');
+const path = require('path');
+
 class Library {
-  constructor() {
+  constructor(dataFile = path.join(__dirname, 'library.json')) {
     this.books = [];
+    this.dataFile = dataFile;
+    this.loadBooks();
+  }
+
+  loadBooks() {
+    try {
+      if (fs.existsSync(this.dataFile)) {
+        const raw = fs.readFileSync(this.dataFile, { encoding: 'utf8' });
+        const data = JSON.parse(raw);
+        if (Array.isArray(data)) this.books = data;
+      }
+    } catch (e) {
+      // ignore errors and start with empty collection
+      this.books = [];
+    }
+  }
+
+  saveBooks() {
+    try {
+      fs.writeFileSync(this.dataFile, JSON.stringify(this.books, null, 2), { encoding: 'utf8' });
+    } catch (e) {
+      console.error('Failed to save library data:', e.message);
+    }
   }
 
   normalizeTitle(title) {
@@ -38,6 +64,7 @@ class Library {
     }
 
     this.books.push({ title: cleanTitle, author: cleanAuthor, available: true });
+    this.saveBooks();
     console.log(`Book added: "${cleanTitle}" by ${cleanAuthor}`);
   }
 
@@ -45,6 +72,7 @@ class Library {
     const book = this.findBook(title, true);
     if (book) {
       book.available = false;
+      this.saveBooks();
       console.log(`You've borrowed "${book.title}"`);
     } else {
       console.log(`"${title}" is not available.`);
@@ -55,6 +83,7 @@ class Library {
     const book = this.findBook(title, false);
     if (book) {
       book.available = true;
+      this.saveBooks();
       console.log(`You've returned "${book.title}"`);
     } else {
       console.log(`"${title}" was not borrowed.`);

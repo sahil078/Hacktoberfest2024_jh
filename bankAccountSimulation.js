@@ -96,3 +96,28 @@ myAccount.getBalance();
 bobAccount.getBalance();
 myAccount.showTransactions();
 bobAccount.showTransactions();
+
+// Simple persistence for example accounts (non-blocking best-effort)
+const fs = require('fs');
+const path = require('path');
+const DATA_FILE = path.join(__dirname, 'bank_accounts.json');
+
+function toSerializable(account) {
+  return {
+    owner: account.owner,
+    balance: account.balance,
+    transactions: account.transactions,
+  };
+}
+
+function saveAccounts(accounts) {
+  try {
+    const out = accounts.map(toSerializable);
+    fs.writeFileSync(DATA_FILE, JSON.stringify(out, null, 2), { encoding: 'utf8' });
+    console.log('Saved account snapshots to', DATA_FILE);
+  } catch (e) {
+    console.error('Failed to save accounts:', e.message);
+  }
+}
+
+saveAccounts([myAccount, bobAccount]);
