@@ -83,6 +83,76 @@ Follow these steps to get started with your contributions:
 
 Start your journey in open source by contributing to this project during Hacktoberfest! Feel free to ask any questions in the issues or create your own.
 
+## Featured Scripts (Recently Improved)
+
+### 1) Python Task Manager
+
+File: `basicTaskManager.py`
+
+Features:
+- Persistent tasks saved in `tasks.json`
+- Add, view, mark complete, and delete tasks
+- Backward-compatible loading for older task formats
+
+Run:
+```bash
+python3 basicTaskManager.py
+```
+
+### 2) Weather Data Fetching (Node.js)
+
+File: `weatherDataFetching.js`
+
+Features:
+- Uses `OPENWEATHER_API_KEY` from environment variables
+- Supports unit selection (`--unit=c` or `--unit=f`)
+- Improved error handling and detailed output
+
+Run:
+```bash
+export OPENWEATHER_API_KEY="your_api_key"
+node weatherDataFetching.js "New York" --unit=f
+```
+
+### 3) Bank Account Simulation (Node.js)
+
+File: `bankAccountSimulation.js`
+
+Features:
+- Input validation for deposits/withdrawals/transfers
+- Transfer support between accounts
+- Full transaction history with timestamps
+
+Run:
+```bash
+node bankAccountSimulation.js
+```
+Notes:
+- Account snapshots are saved to `bank_accounts.json` when the example runs.
+
+### 4) Library System (Node.js)
+
+File: `librarySystem.js`
+
+Features:
+- Case-insensitive title search, borrow, and return
+- Duplicate prevention for same title + author
+- List available books utility
+
+Run:
+```bash
+node librarySystem.js [command] [args]
+```
++Notes:
++- The library persists its collection to `library.json` in the same folder.
++- Available commands:
++  * `add "Title" "Author"`
++  * `search "Title"`
++  * `borrow "Title"`
++  * `return "Title"`
++  * `list`
++  * `help`
+
 
 ## Contribution Guidelines
 
